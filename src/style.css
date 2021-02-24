@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+/* Sidebar Header */
+.sidebar{
+    width: 10%;
+    padding: 20px 15px;
+    background-color:#143600;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.sidebar__logo{
+    width: 80%;
+}
+
+.logo{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.logo__img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.action-wrapper__add-btn{
+    font-size: 1rem;
+    padding: 10px 5px;
+    background-color:rgb(20, 54, 0);
+    border: 2px solid rgb(20, 54, 0);
+    color: white;
+}
+
+.action-wrapper__add-btn:hover{
+    transition: .5s;
+    border: 2px solid white;
+}
+
+/* start TodoItemForm */
+.todoitem-form{
+    padding: 10px 0;
+    animation: movebottom 1 1s ease;
+    animation-fill-mode: forwards;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    border: 2px solid rgb(20, 54, 0);
+}
+
+.todoitem-form__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.todoitem-form__button{
+    border: 2px solid white;
+    padding: 5px 15px;
+}
+
+.todoitem-form__button:hover{
+    border: 2px solid rgb(20, 54, 0);
+}
+
+@keyframes movebottom{
+    from{
+        transform: translateY(-20vh);
+    }
+    to{
+        transform: translateY(0vh);
+    }
+}
+
+.todoitem-form__item{
+    min-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.todoitem-form__btns{
+    justify-content: flex-end;
+}
+
+.todoitem-form__button:last-child{
+    margin-left: 5px;
+}
+
+.todoitem-form__input{
+    width: 80%;
+    border: 2px solid rgb(20, 54, 0);
+}
+/* end TodoItemForm */
+
+/* start TodoItemList */
+.todoitemlist{
+    list-style-type: none;
+    width: 100%;
+}
+/* end TodoItemList */
+
+/* start TodoItem */
+.todoitem{
+    display: flex;
+    padding: 10px;
+    border-bottom: 2px solid rgb(20, 54, 0);
+}
+
+.todoitem__main-content{
+    width: 90%;
+    display: flex;
+}
+
+.progress{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todoitem__body{
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+.todoitem__setup{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.setup-btns{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.setup-btns__btn{
+    max-height: 35px;
+    max-width: 40%;
+    border: 1px solid lightgray;
+}
+
+.setup-btns__btn:hover{
+    border: 1px solid green;
+}
+
+.btn-img{
+    width: 100%;
+    height: 100%;
+}
+/* end TodoItem */
+
+/* start ProgressForm */
+.progress-form{
+    width: 100%;
+    padding: 0 10px;
+}
+.progress-form__body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.progress-form__input{
+    width: 100%;
+    border: 1px solid green;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+}
+.progress-form__save-btn{
+    max-height: 30px;
+    border: 2px solid white;
+}
+.progress-form__save-btn:hover{
+    border: 2px solid green;
+}
+.progress-form__save-img{
+    max-width: 25%;
+    height: 100%;
+}
+/* end ProgressForm */
+
+/* start TodoDates */
+.tododates{
+    font-size: 0.9rem;
+}
+/* end TodoDates */
+
+/* start TodoInfo */
+.todoitem-info{
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    white-space: pre-wrap; 
+}
+.todoitem-info__item{
+    min-width: 80%;
+}
+.todoinfo-item__input{
+    width: 100%;
+}
+.todoitem-info__note{
+    color: gray;
+    font-size: 0.9rem;
+}
+/* end TodoInfo */
+
+/* start ProgressList */
+.progress-list--hidden{
+    display: none;
+}
+.progress-list{
+    text-align: right;
+}
+.progress-list__header{
+    margin-bottom: 5px;
+}
+.progress-item__date{
+    color: white;
+    background-color: rgb(20, 54, 0);
+}
+.progress-item__delimeter{
+    margin: 0 5px;
+}
+.progress-list__body{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.progress-item{
+    min-width: 49%;
+}
+/* end ProgressList */
+
+/* start SortPanel */
+.sort-panel{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.sort-panel__item{
+    border: 2px solid white;
+    padding: 5px 15px;
+}
+.sort-panel__item:hover{
+    border: 2px solid rgb(20, 54, 0);
+}
+/* end SortPanel */
+
+/* start Modal */
+.modal{
+    background-color: rgb(20, 54, 0);
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    min-height: 15%;
+    text-align: center;
+    padding: 10px 0;
+}
+/* end Modal */
+@media screen and (max-width: 740px){
+    .app{
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+    }
+    .sidebar__logo{
+        width: 8%;
+    }
+    .logo{
+        max-width: 35px;
+    }
+    .todoitem{
+        flex-direction: column;
+    }
+    .todoitem__main-content{
+        width: 100%;
+    }
+    .progress{
+        font-size: 0.8rem;
+    }
+    .progress-form{
+        padding: 0 2px;
+    }
+    .todoitem__setup{
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .tododates{
+        display: flex;
+        font-size: 0.7rem;
+    }
+    .date-info{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .date-info:first-child{
+        margin: 0 10px;
+    }
+    .setup-btns{
+        justify-content: flex-end;
+        width: 20%;
+        min-width: 40%;
+    }
+    .setup-btns__btn{
+        height: 30px;
+        max-width: 25%;
+        margin-right: 5px;
+    }
+    .todoitem-form__item{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .progress-item{
+        font-size: 0.8rem;
+    }
+}
