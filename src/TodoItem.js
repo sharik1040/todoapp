@@ -8,6 +8,7 @@ import { TodoApp } from './App';
 import './style.css';
 import del from './images/delete.png';
 import update from './images/update.jpg';
+import save from './images/save.png';
 
 const TodoItem = ({title, notes, incomeDate, completedDate, progress, id}) => {
     const { handleProgressChange, handleUpdate, handleDelete } = useContext(TodoApp);
@@ -58,9 +59,8 @@ const TodoItem = ({title, notes, incomeDate, completedDate, progress, id}) => {
                 <div className="setup-btns">
                     <button onClick={handleUpdateClick}
                             className='setup-btns__btn setup-btns__update'>
-                        <img src={update} 
-                             alt="Update" 
-                             className="btn-img"/>
+                        {isUpdate ? <img src={save} alt="Save" className="btn-img"/> : 
+                                    <img src={update} alt="Update" className="btn-img"/>}
                     </button>
                     <button onClick={handleDeleteClick}
                             className="setup-btns__btn setub-btns__delete">
